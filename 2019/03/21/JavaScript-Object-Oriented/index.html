@@ -6,20 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="JavaScript 对象与对象属性1let obj &#x3D; &amp;#123;v: 1&amp;#125;  JavaScript 通过一些属性时都会带有一些特征值，ECMA-262 定义的，只有内部使用的，外部不能访问的特性，初期是为了实现 JavaScript 引擎使用的。具体如下表  数据属性   characteristic description    [[Configurable]] 能否通过 del">
+    <meta name="description" content="JavaScript 对象与对象属性123let obj &#x3D; &amp;#123;v: 1, o: undefined&amp;#125;console.log(&amp;#x27;o&amp;#x27; in obj, obj.o) &#x2F;&#x2F; true undefinedconsole.log(&amp;#x27;b&amp;#x27; in obj, obj.b) &#x2F;&#x2F; false undefined 虽然，属性值都是 undefined，但">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript - Object Oriented">
 <meta property="og:url" content="https://helenzhanglp.github.io/2019/03/21/JavaScript-Object-Oriented/index.html">
 <meta property="og:site_name" content="魔女">
-<meta property="og:description" content="JavaScript 对象与对象属性1let obj &#x3D; &amp;#123;v: 1&amp;#125;  JavaScript 通过一些属性时都会带有一些特征值，ECMA-262 定义的，只有内部使用的，外部不能访问的特性，初期是为了实现 JavaScript 引擎使用的。具体如下表  数据属性   characteristic description    [[Configurable]] 能否通过 del">
+<meta property="og:description" content="JavaScript 对象与对象属性123let obj &#x3D; &amp;#123;v: 1, o: undefined&amp;#125;console.log(&amp;#x27;o&amp;#x27; in obj, obj.o) &#x2F;&#x2F; true undefinedconsole.log(&amp;#x27;b&amp;#x27; in obj, obj.b) &#x2F;&#x2F; false undefined 虽然，属性值都是 undefined，但">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://helenzhanglp.github.io/images/1.gif">
 <meta property="article:published_time" content="2019-03-21T02:02:40.000Z">
-<meta property="article:modified_time" content="2021-07-09T10:40:49.167Z">
+<meta property="article:modified_time" content="2021-07-09T11:11:34.384Z">
 <meta property="article:author" content="Helen Zhang">
 <meta property="article:tag" content="JavaScript">
-<meta property="article:tag" content="对象">
 <meta property="article:tag" content="Object">
+<meta property="article:tag" content="对象">
 <meta property="article:tag" content="构造函数">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://helenzhanglp.github.io/images/1.gif">
@@ -145,7 +145,8 @@
   <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://helenzhanglp.github.io/2019/03/21/JavaScript-Object-Oriented/&title=JavaScript - Object Oriented"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
   <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://helenzhanglp.github.io/2019/03/21/JavaScript-Object-Oriented/&title=JavaScript - Object Oriented"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
   <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://helenzhanglp.github.io/2019/03/21/JavaScript-Object-Oriented/&title=JavaScript - Object Oriented"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://helenzhanglp.github.io/2019/03/21/JavaScript-Object-Oriented/&name=JavaScript - Object Oriented&description=&lt;h2 id=&#34;JavaScript-对象与对象属性&#34;&gt;&lt;a href=&#34;#JavaScript-对象与对象属性&#34; class=&#34;headerlink&#34; title=&#34;JavaScript 对象与对象属性&#34;&gt;&lt;/a&gt;JavaScript 对象与对象属性&lt;/h2&gt;&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; obj = &amp;#123;&lt;span class=&#34;attr&#34;&gt;v&lt;/span&gt;: &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://helenzhanglp.github.io/2019/03/21/JavaScript-Object-Oriented/&name=JavaScript - Object Oriented&description=&lt;h2 id=&#34;JavaScript-对象与对象属性&#34;&gt;&lt;a href=&#34;#JavaScript-对象与对象属性&#34; class=&#34;headerlink&#34; title=&#34;JavaScript 对象与对象属性&#34;&gt;&lt;/a&gt;JavaScript 对象与对象属性&lt;/h2&gt;&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; obj = &amp;#123;&lt;span class=&#34;attr&#34;&gt;v&lt;/span&gt;: &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;attr&#34;&gt;o&lt;/span&gt;: &lt;span class=&#34;literal&#34;&gt;undefined&lt;/span&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;console&lt;/span&gt;.log(&lt;span class=&#34;string&#34;&gt;&amp;#x27;o&amp;#x27;&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;in&lt;/span&gt; obj, obj.o) &lt;span class=&#34;comment&#34;&gt;// true undefined&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;console&lt;/span&gt;.log(&lt;span class=&#34;string&#34;&gt;&amp;#x27;b&amp;#x27;&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;in&lt;/span&gt; obj, obj.b) &lt;span class=&#34;comment&#34;&gt;// false undefined&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;font color=&#34;#f33&#34;&gt;虽然，属性值都是 undefined，但 &lt;strong&gt;特性名不存在与特性值赋为 undefined 是不同的，&lt;/strong&gt; 可以用 &lt;code&gt;in&lt;/code&gt; 运算符，查看对象是否有某个属性&lt;/font&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;JavaScript 通过一些属性时都会带有一些特征值，ECMA-262 定义的，只有内部使用的，外部不能访问的特性，初期是为了实现 JavaScript 引擎使用的。具体如下表&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -198,8 +199,7 @@
 &lt;td&gt;[[Set]]&lt;/td&gt;
 &lt;td&gt;设置属性时调用&lt;/td&gt;
 &lt;/tr&gt;
-&lt;/tbody&gt;&lt;/table&gt;
-&lt;h2 id=&#34;创建对象&#34;&gt;&lt;a href=&#34;#创建对象&#34; class=&#34;headerlink&#34; title=&#34;创建对象&#34;&gt;&lt;/a&gt;创建对象&lt;/h2&gt;"><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+&lt;/tbody&gt;&lt;/table&gt;"><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -232,14 +232,15 @@
 
 
       
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="article-tag-list-count">23</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Object/" rel="tag">Object</a><span class="article-tag-list-count">2</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AF%B9%E8%B1%A1/" rel="tag">对象</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/" rel="tag">构造函数</a><span class="article-tag-list-count">1</span></li></ul>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="article-tag-list-count">24</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Object/" rel="tag">Object</a><span class="article-tag-list-count">2</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AF%B9%E8%B1%A1/" rel="tag">对象</a><span class="article-tag-list-count">1</span></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/" rel="tag">构造函数</a><span class="article-tag-list-count">1</span></li></ul>
 
     </div>
   </header>
   
 
   <div class="content" itemprop="articleBody">
-    <h2 id="JavaScript-对象与对象属性"><a href="#JavaScript-对象与对象属性" class="headerlink" title="JavaScript 对象与对象属性"></a>JavaScript 对象与对象属性</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123;<span class="attr">v</span>: <span class="number">1</span>&#125;</span><br></pre></td></tr></table></figure>
+    <h2 id="JavaScript-对象与对象属性"><a href="#JavaScript-对象与对象属性" class="headerlink" title="JavaScript 对象与对象属性"></a>JavaScript 对象与对象属性</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123;<span class="attr">v</span>: <span class="number">1</span>, <span class="attr">o</span>: <span class="literal">undefined</span>&#125;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;o&#x27;</span> <span class="keyword">in</span> obj, obj.o) <span class="comment">// true undefined</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;b&#x27;</span> <span class="keyword">in</span> obj, obj.b) <span class="comment">// false undefined</span></span><br></pre></td></tr></table></figure>
+<p><font color="#f33">虽然，属性值都是 undefined，但 <strong>特性名不存在与特性值赋为 undefined 是不同的，</strong> 可以用 <code>in</code> 运算符，查看对象是否有某个属性</font></p>
 <blockquote>
 <p>JavaScript 通过一些属性时都会带有一些特征值，ECMA-262 定义的，只有内部使用的，外部不能访问的特性，初期是为了实现 JavaScript 引擎使用的。具体如下表</p>
 </blockquote>
@@ -557,7 +558,8 @@ style instance fill:#f99,stroke:#333,stroke-width:4px</pre>
   <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://helenzhanglp.github.io/2019/03/21/JavaScript-Object-Oriented/&title=JavaScript - Object Oriented"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
   <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://helenzhanglp.github.io/2019/03/21/JavaScript-Object-Oriented/&title=JavaScript - Object Oriented"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
   <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://helenzhanglp.github.io/2019/03/21/JavaScript-Object-Oriented/&title=JavaScript - Object Oriented"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://helenzhanglp.github.io/2019/03/21/JavaScript-Object-Oriented/&name=JavaScript - Object Oriented&description=&lt;h2 id=&#34;JavaScript-对象与对象属性&#34;&gt;&lt;a href=&#34;#JavaScript-对象与对象属性&#34; class=&#34;headerlink&#34; title=&#34;JavaScript 对象与对象属性&#34;&gt;&lt;/a&gt;JavaScript 对象与对象属性&lt;/h2&gt;&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; obj = &amp;#123;&lt;span class=&#34;attr&#34;&gt;v&lt;/span&gt;: &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://helenzhanglp.github.io/2019/03/21/JavaScript-Object-Oriented/&name=JavaScript - Object Oriented&description=&lt;h2 id=&#34;JavaScript-对象与对象属性&#34;&gt;&lt;a href=&#34;#JavaScript-对象与对象属性&#34; class=&#34;headerlink&#34; title=&#34;JavaScript 对象与对象属性&#34;&gt;&lt;/a&gt;JavaScript 对象与对象属性&lt;/h2&gt;&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; obj = &amp;#123;&lt;span class=&#34;attr&#34;&gt;v&lt;/span&gt;: &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;attr&#34;&gt;o&lt;/span&gt;: &lt;span class=&#34;literal&#34;&gt;undefined&lt;/span&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;console&lt;/span&gt;.log(&lt;span class=&#34;string&#34;&gt;&amp;#x27;o&amp;#x27;&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;in&lt;/span&gt; obj, obj.o) &lt;span class=&#34;comment&#34;&gt;// true undefined&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;console&lt;/span&gt;.log(&lt;span class=&#34;string&#34;&gt;&amp;#x27;b&amp;#x27;&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;in&lt;/span&gt; obj, obj.b) &lt;span class=&#34;comment&#34;&gt;// false undefined&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;font color=&#34;#f33&#34;&gt;虽然，属性值都是 undefined，但 &lt;strong&gt;特性名不存在与特性值赋为 undefined 是不同的，&lt;/strong&gt; 可以用 &lt;code&gt;in&lt;/code&gt; 运算符，查看对象是否有某个属性&lt;/font&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;JavaScript 通过一些属性时都会带有一些特征值，ECMA-262 定义的，只有内部使用的，外部不能访问的特性，初期是为了实现 JavaScript 引擎使用的。具体如下表&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -610,8 +612,7 @@ style instance fill:#f99,stroke:#333,stroke-width:4px</pre>
 &lt;td&gt;[[Set]]&lt;/td&gt;
 &lt;td&gt;设置属性时调用&lt;/td&gt;
 &lt;/tr&gt;
-&lt;/tbody&gt;&lt;/table&gt;
-&lt;h2 id=&#34;创建对象&#34;&gt;&lt;a href=&#34;#创建对象&#34; class=&#34;headerlink&#34; title=&#34;创建对象&#34;&gt;&lt;/a&gt;创建对象&lt;/h2&gt;"><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+&lt;/tbody&gt;&lt;/table&gt;"><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>

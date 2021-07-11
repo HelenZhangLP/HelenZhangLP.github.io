@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="四个核心概念  entry(入口)  output(输出)  devServer配置本地运行环境 12345&#x2F;&#x2F; 开发模式下，提供虚拟服务器，用于项目开发和测试devServer: &amp;#123;  port: 3000,  contentBase: &quot;.&#x2F;dist&quot; &#x2F;&#x2F; boolean&#x2F;string&#x2F;array 服务器资源根目录&amp;#125; loader(转换器)通过 loa">
+    <meta name="description" content="webpack 建议本地安装，可以在引入重大更新（breaking change）版本时，更容易分别升级项目。通常会通过运行一个或多个 npm scripts 以在本地 node_modules 目录中查找安装的 webpack。 npm v5.2.0 或更高版本，要运行 npx webapck 执行 安装 wepack1npm i webpack webpack-cli webpack-dev-">
 <meta property="og:type" content="article">
 <meta property="og:title" content="webpack 配置">
-<meta property="og:url" content="https://helenzhanglp.github.io/2021/07/09/Webpack-setting/index.html">
+<meta property="og:url" content="https://helenzhanglp.github.io/2018/05/21/Webpack-setting/index.html">
 <meta property="og:site_name" content="魔女">
-<meta property="og:description" content="四个核心概念  entry(入口)  output(输出)  devServer配置本地运行环境 12345&#x2F;&#x2F; 开发模式下，提供虚拟服务器，用于项目开发和测试devServer: &amp;#123;  port: 3000,  contentBase: &quot;.&#x2F;dist&quot; &#x2F;&#x2F; boolean&#x2F;string&#x2F;array 服务器资源根目录&amp;#125; loader(转换器)通过 loa">
+<meta property="og:description" content="webpack 建议本地安装，可以在引入重大更新（breaking change）版本时，更容易分别升级项目。通常会通过运行一个或多个 npm scripts 以在本地 node_modules 目录中查找安装的 webpack。 npm v5.2.0 或更高版本，要运行 npx webapck 执行 安装 wepack1npm i webpack webpack-cli webpack-dev-">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-07-09T10:40:49.169Z">
-<meta property="article:modified_time" content="2021-07-09T10:40:49.169Z">
+<meta property="article:published_time" content="2018-05-21T02:36:49.000Z">
+<meta property="article:modified_time" content="2021-07-09T11:11:34.387Z">
 <meta property="article:author" content="Helen Zhang">
 <meta property="article:tag" content="webpack">
 <meta name="twitter:card" content="summary">
@@ -115,8 +115,8 @@
     <span id="actions">
       <ul>
         
+        <li><a class="icon" href="/2018/06/26/%E5%9D%91-html/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li>
         
-        <li><a class="icon" href="/2021/07/06/bash-profile/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
         
         <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
         <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
@@ -129,16 +129,24 @@
     <br/>
     <div id="share" style="display: none">
       <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://helenzhanglp.github.io/2021/07/09/Webpack-setting/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://helenzhanglp.github.io/2021/07/09/Webpack-setting/&text=webpack 配置"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://helenzhanglp.github.io/2021/07/09/Webpack-setting/&title=webpack 配置"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://helenzhanglp.github.io/2021/07/09/Webpack-setting/&is_video=false&description=webpack 配置"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=webpack 配置&body=Check out this article: https://helenzhanglp.github.io/2021/07/09/Webpack-setting/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://helenzhanglp.github.io/2021/07/09/Webpack-setting/&title=webpack 配置"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://helenzhanglp.github.io/2021/07/09/Webpack-setting/&title=webpack 配置"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://helenzhanglp.github.io/2021/07/09/Webpack-setting/&title=webpack 配置"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://helenzhanglp.github.io/2021/07/09/Webpack-setting/&title=webpack 配置"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://helenzhanglp.github.io/2021/07/09/Webpack-setting/&name=webpack 配置&description=&lt;p&gt;四个核心概念&lt;/p&gt;
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://helenzhanglp.github.io/2018/05/21/Webpack-setting/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://helenzhanglp.github.io/2018/05/21/Webpack-setting/&text=webpack 配置"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://helenzhanglp.github.io/2018/05/21/Webpack-setting/&title=webpack 配置"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://helenzhanglp.github.io/2018/05/21/Webpack-setting/&is_video=false&description=webpack 配置"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=webpack 配置&body=Check out this article: https://helenzhanglp.github.io/2018/05/21/Webpack-setting/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://helenzhanglp.github.io/2018/05/21/Webpack-setting/&title=webpack 配置"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://helenzhanglp.github.io/2018/05/21/Webpack-setting/&title=webpack 配置"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://helenzhanglp.github.io/2018/05/21/Webpack-setting/&title=webpack 配置"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://helenzhanglp.github.io/2018/05/21/Webpack-setting/&title=webpack 配置"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://helenzhanglp.github.io/2018/05/21/Webpack-setting/&name=webpack 配置&description=&lt;p&gt;webpack 建议本地安装，可以在引入重大更新（breaking change）版本时，更容易分别升级项目。通常会通过运行一个或多个 &lt;code&gt;npm scripts&lt;/code&gt; 以在本地 &lt;code&gt;node_modules&lt;/code&gt; 目录中查找安装的 webpack。&lt;/p&gt;
+&lt;p&gt;&lt;font color=&#34;#f33&#34;&gt;npm v5.2.0 或更高版本，要运行 npx webapck 执行&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&#34;安装-wepack&#34;&gt;&lt;a href=&#34;#安装-wepack&#34; class=&#34;headerlink&#34; title=&#34;安装 wepack&#34;&gt;&lt;/a&gt;安装 wepack&lt;/h2&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm i webpack webpack-cli webpack-dev-server --save-dev&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;webpack webpack 的核心文件，必须&lt;/li&gt;
+&lt;li&gt;webpack-cli 如果你使用 webpack v4+ 版本，并且想要在命令行调用 webpack 安装 webpack-cli&lt;/li&gt;
+&lt;li&gt;webpack-dev-server dev 环境启动服务&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;四个核心概念&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;entry(入口)&lt;/p&gt;
 &lt;/li&gt;
@@ -170,19 +178,12 @@
 &lt;/ul&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
 
-&lt;h2 id=&#34;Error-Cannot-find-module-‘webpack-cli-bin-config-yargs’&#34;&gt;&lt;a href=&#34;#Error-Cannot-find-module-‘webpack-cli-bin-config-yargs’&#34; class=&#34;headerlink&#34; title=&#34;Error: Cannot find module ‘webpack-cli/bin/config-yargs’&#34;&gt;&lt;/a&gt;Error: Cannot find module ‘webpack-cli/bin/config-yargs’&lt;/h2&gt;&lt;p&gt;code: ‘MODULE_NOT_FOUND’&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;webpack-dev-server –open –mode development&lt;br&gt;“webpack-cli”: “^4.6.0”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;font color=&#34;red&#34;&gt;&lt;strong&gt;降版本，将 webpack-cli 版本降至 3&lt;/strong&gt;&lt;/font&gt;&lt;/p&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ npm i webpack-cli@3 -D --force&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h2 id=&#34;webpack-设置热更新&#34;&gt;&lt;a href=&#34;#webpack-设置热更新&#34; class=&#34;headerlink&#34; title=&#34;webpack 设置热更新&#34;&gt;&lt;/a&gt;webpack 设置热更新&lt;/h2&gt;&lt;p&gt;&lt;font color=&#34;red&#34;&gt;这种的配置的问题在于，文本修改后不能及时更新，但是解决了&lt;code&gt;Cannot find module &amp;#39;webpack-cli/bin/config-yargs&amp;#39;&lt;/code&gt;的问题&lt;/font&gt;&lt;/p&gt;"><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+&lt;h2 id=&#34;Error-Cannot-find-module-‘webpack-cli-bin-config-yargs’&#34;&gt;&lt;a href=&#34;#Error-Cannot-find-module-‘webpack-cli-bin-config-yargs’&#34; class=&#34;headerlink&#34; title=&#34;Error: Cannot find module ‘webpack-cli/bin/config-yargs’&#34;&gt;&lt;/a&gt;Error: Cannot find module ‘webpack-cli/bin/config-yargs’&lt;/h2&gt;&lt;p&gt;code: ‘MODULE_NOT_FOUND’&lt;/p&gt;"><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Error-Cannot-find-module-%E2%80%98webpack-cli-bin-config-yargs%E2%80%99"><span class="toc-number">1.</span> <span class="toc-text">Error: Cannot find module ‘webpack-cli&#x2F;bin&#x2F;config-yargs’</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#webpack-%E8%AE%BE%E7%BD%AE%E7%83%AD%E6%9B%B4%E6%96%B0"><span class="toc-number">2.</span> <span class="toc-text">webpack 设置热更新</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-wepack"><span class="toc-number">1.</span> <span class="toc-text">安装 wepack</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Error-Cannot-find-module-%E2%80%98webpack-cli-bin-config-yargs%E2%80%99"><span class="toc-number">2.</span> <span class="toc-text">Error: Cannot find module ‘webpack-cli&#x2F;bin&#x2F;config-yargs’</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#webpack-%E8%AE%BE%E7%BD%AE%E7%83%AD%E6%9B%B4%E6%96%B0"><span class="toc-number">3.</span> <span class="toc-text">webpack 设置热更新</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -205,7 +206,7 @@
       </span>
       
     <div class="postdate">
-        <time datetime="2021-07-09T10:40:49.169Z" itemprop="datePublished">2021-07-09</time>
+        <time datetime="2018-05-21T02:36:49.000Z" itemprop="datePublished">2018-05-21</time>
     </div>
 
 
@@ -217,7 +218,15 @@
   
 
   <div class="content" itemprop="articleBody">
-    <p>四个核心概念</p>
+    <p>webpack 建议本地安装，可以在引入重大更新（breaking change）版本时，更容易分别升级项目。通常会通过运行一个或多个 <code>npm scripts</code> 以在本地 <code>node_modules</code> 目录中查找安装的 webpack。</p>
+<p><font color="#f33">npm v5.2.0 或更高版本，要运行 npx webapck 执行</font></p>
+<h2 id="安装-wepack"><a href="#安装-wepack" class="headerlink" title="安装 wepack"></a>安装 wepack</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i webpack webpack-cli webpack-dev-server --save-dev</span><br></pre></td></tr></table></figure>
+<ul>
+<li>webpack webpack 的核心文件，必须</li>
+<li>webpack-cli 如果你使用 webpack v4+ 版本，并且想要在命令行调用 webpack 安装 webpack-cli</li>
+<li>webpack-dev-server dev 环境启动服务</li>
+</ul>
+<p>四个核心概念</p>
 <ul>
 <li><p>entry(入口)</p>
 </li>
@@ -294,21 +303,29 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Error-Cannot-find-module-%E2%80%98webpack-cli-bin-config-yargs%E2%80%99"><span class="toc-number">1.</span> <span class="toc-text">Error: Cannot find module ‘webpack-cli&#x2F;bin&#x2F;config-yargs’</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#webpack-%E8%AE%BE%E7%BD%AE%E7%83%AD%E6%9B%B4%E6%96%B0"><span class="toc-number">2.</span> <span class="toc-text">webpack 设置热更新</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-wepack"><span class="toc-number">1.</span> <span class="toc-text">安装 wepack</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Error-Cannot-find-module-%E2%80%98webpack-cli-bin-config-yargs%E2%80%99"><span class="toc-number">2.</span> <span class="toc-text">Error: Cannot find module ‘webpack-cli&#x2F;bin&#x2F;config-yargs’</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#webpack-%E8%AE%BE%E7%BD%AE%E7%83%AD%E6%9B%B4%E6%96%B0"><span class="toc-number">3.</span> <span class="toc-text">webpack 设置热更新</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
       <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://helenzhanglp.github.io/2021/07/09/Webpack-setting/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://helenzhanglp.github.io/2021/07/09/Webpack-setting/&text=webpack 配置"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://helenzhanglp.github.io/2021/07/09/Webpack-setting/&title=webpack 配置"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://helenzhanglp.github.io/2021/07/09/Webpack-setting/&is_video=false&description=webpack 配置"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=webpack 配置&body=Check out this article: https://helenzhanglp.github.io/2021/07/09/Webpack-setting/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://helenzhanglp.github.io/2021/07/09/Webpack-setting/&title=webpack 配置"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://helenzhanglp.github.io/2021/07/09/Webpack-setting/&title=webpack 配置"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://helenzhanglp.github.io/2021/07/09/Webpack-setting/&title=webpack 配置"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://helenzhanglp.github.io/2021/07/09/Webpack-setting/&title=webpack 配置"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://helenzhanglp.github.io/2021/07/09/Webpack-setting/&name=webpack 配置&description=&lt;p&gt;四个核心概念&lt;/p&gt;
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://helenzhanglp.github.io/2018/05/21/Webpack-setting/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://helenzhanglp.github.io/2018/05/21/Webpack-setting/&text=webpack 配置"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://helenzhanglp.github.io/2018/05/21/Webpack-setting/&title=webpack 配置"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://helenzhanglp.github.io/2018/05/21/Webpack-setting/&is_video=false&description=webpack 配置"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=webpack 配置&body=Check out this article: https://helenzhanglp.github.io/2018/05/21/Webpack-setting/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://helenzhanglp.github.io/2018/05/21/Webpack-setting/&title=webpack 配置"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://helenzhanglp.github.io/2018/05/21/Webpack-setting/&title=webpack 配置"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://helenzhanglp.github.io/2018/05/21/Webpack-setting/&title=webpack 配置"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://helenzhanglp.github.io/2018/05/21/Webpack-setting/&title=webpack 配置"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://helenzhanglp.github.io/2018/05/21/Webpack-setting/&name=webpack 配置&description=&lt;p&gt;webpack 建议本地安装，可以在引入重大更新（breaking change）版本时，更容易分别升级项目。通常会通过运行一个或多个 &lt;code&gt;npm scripts&lt;/code&gt; 以在本地 &lt;code&gt;node_modules&lt;/code&gt; 目录中查找安装的 webpack。&lt;/p&gt;
+&lt;p&gt;&lt;font color=&#34;#f33&#34;&gt;npm v5.2.0 或更高版本，要运行 npx webapck 执行&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&#34;安装-wepack&#34;&gt;&lt;a href=&#34;#安装-wepack&#34; class=&#34;headerlink&#34; title=&#34;安装 wepack&#34;&gt;&lt;/a&gt;安装 wepack&lt;/h2&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm i webpack webpack-cli webpack-dev-server --save-dev&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;webpack webpack 的核心文件，必须&lt;/li&gt;
+&lt;li&gt;webpack-cli 如果你使用 webpack v4+ 版本，并且想要在命令行调用 webpack 安装 webpack-cli&lt;/li&gt;
+&lt;li&gt;webpack-dev-server dev 环境启动服务&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;四个核心概念&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;entry(入口)&lt;/p&gt;
 &lt;/li&gt;
@@ -340,14 +357,7 @@
 &lt;/ul&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
 
-&lt;h2 id=&#34;Error-Cannot-find-module-‘webpack-cli-bin-config-yargs’&#34;&gt;&lt;a href=&#34;#Error-Cannot-find-module-‘webpack-cli-bin-config-yargs’&#34; class=&#34;headerlink&#34; title=&#34;Error: Cannot find module ‘webpack-cli/bin/config-yargs’&#34;&gt;&lt;/a&gt;Error: Cannot find module ‘webpack-cli/bin/config-yargs’&lt;/h2&gt;&lt;p&gt;code: ‘MODULE_NOT_FOUND’&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;webpack-dev-server –open –mode development&lt;br&gt;“webpack-cli”: “^4.6.0”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;font color=&#34;red&#34;&gt;&lt;strong&gt;降版本，将 webpack-cli 版本降至 3&lt;/strong&gt;&lt;/font&gt;&lt;/p&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ npm i webpack-cli@3 -D --force&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h2 id=&#34;webpack-设置热更新&#34;&gt;&lt;a href=&#34;#webpack-设置热更新&#34; class=&#34;headerlink&#34; title=&#34;webpack 设置热更新&#34;&gt;&lt;/a&gt;webpack 设置热更新&lt;/h2&gt;&lt;p&gt;&lt;font color=&#34;red&#34;&gt;这种的配置的问题在于，文本修改后不能及时更新，但是解决了&lt;code&gt;Cannot find module &amp;#39;webpack-cli/bin/config-yargs&amp;#39;&lt;/code&gt;的问题&lt;/font&gt;&lt;/p&gt;"><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+&lt;h2 id=&#34;Error-Cannot-find-module-‘webpack-cli-bin-config-yargs’&#34;&gt;&lt;a href=&#34;#Error-Cannot-find-module-‘webpack-cli-bin-config-yargs’&#34; class=&#34;headerlink&#34; title=&#34;Error: Cannot find module ‘webpack-cli/bin/config-yargs’&#34;&gt;&lt;/a&gt;Error: Cannot find module ‘webpack-cli/bin/config-yargs’&lt;/h2&gt;&lt;p&gt;code: ‘MODULE_NOT_FOUND’&lt;/p&gt;"><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
